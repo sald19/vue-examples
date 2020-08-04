@@ -1,0 +1,11 @@
+#app {
+  display: flex;
+  justify-content: center;
+
+  background-color: #f4f7ff;
+  height: 100vh;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
