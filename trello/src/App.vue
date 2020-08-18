@@ -1,5 +1,7 @@
 <template>
-  <canvas />
+  <div class="lg:container mx-auto">
+    <Canvas />
+  </div>
 </template>
 
 <script>

@@ -1,21 +1,24 @@
 <template>
-  <div class="px-2">
-    <div class="flex -mx-2">
-      <div class="w-1/3 px-2">
-        <div class="bg-gray-400 h-12"></div>
-      </div>
-      <div class="w-1/3 px-2">
-        <div class="bg-gray-500 h-12"></div>
-      </div>
-      <div class="w-1/3 px-2">
-        <div class="bg-gray-400 h-12"></div>
-      </div>
+  <div class="flex bg-gray-100 h-screen">
+    <div class="flex-1 text-gray-700 bg-gray-200 px-4 m-2">
+      <Card />
+    </div>
+    <div class="flex-1 text-gray-700 bg-gray-200 px-4 m-2">
+      <div class="bg-blue-200">1</div>
+    </div>
+    <div class="flex-1 text-gray-700 bg-gray-200 px-4 m-2">
+      <div class="bg-blue-200">1</div>
     </div>
   </div>
 </template>
 
 <script>
+import Card from "../Card/index.vue";
+
 export default {
-  name: "canvas",
+  name: "Canvas",
+  components: {
+    Card,
+  },
 };
 </script>
