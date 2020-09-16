@@ -1,24 +1,42 @@
 <style module src="./styles.module.css"></style>
 
 <template>
-  <div :class="$style.container">
-    <h1 :class="$style.title">Nerdify Todo {{ completedTodos }}</h1>
-    <ul :class="$style.list">
-      <li :class="$style.item" v-for="todo in todos" :key="todo.id">
+  <div class="px-4">
+    <h1 class="text-black text-2xl font-semibold mt-8">Work</h1>
+    <div class="flex items-center">
+      <div
+        :class="[
+          $style.slider,
+          'flex-1',
+          'w-auto',
+          'h-1',
+          'bg-black',
+          'rounded',
+        ]"
+      ></div>
+      <span class="text-xs ml-4">80%</span>
+    </div>
+
+    <ul class="mt-8">
+      <li
+        class="bg-white my-2 p-4 rounded"
+        v-for="todo in todos"
+        :key="todo.id"
+      >
         <input
-          :class="$style.checkbox"
+          class="mr-4"
           v-model="todo.completed"
           type="checkbox"
           name="complete"
         />
-        <span :class="{ [$style.completed]: todo.completed }">
+        <span>
           {{ todo.title }}
         </span>
-        <span :class="$style.delete" @click="deleteTodo(todo.id)">Delete</span>
+        <span @click="deleteTodo(todo.id)">Delete</span>
       </li>
     </ul>
 
-    <form :class="$style.form" action>
+    <form action>
       <input type="text" v-model="todo" />
       <button @click.prevent="addTodo">Add Todo</button>
     </form>
